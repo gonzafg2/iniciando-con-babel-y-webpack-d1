@@ -4,8 +4,7 @@
   "description": "Proyecto de inicio con babel y webpack para desafio 1",
   "main": "./src/assets/js/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gonzalo Fleming",
   "license": "MIT",
