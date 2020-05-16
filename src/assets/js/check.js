@@ -11,3 +11,7 @@ function teenager(person) {
 var thereAreTeenagers = people.some(teenager);
 
 console.log("There are teenagers:", thereAreTeenagers);
+
+let teen = document.getElementById("text");
+
+teen.innerText = thereAreTeenagers;
