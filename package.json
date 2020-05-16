@@ -2,7 +2,7 @@
   "name": "desafio-1",
   "version": "1.0.0",
   "description": "Proyecto de inicio con babel y webpack para desafio 1",
-  "main": "./assets/js/main.js",
+  "main": "./src/assets/js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
