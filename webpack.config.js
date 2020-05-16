@@ -1,9 +1,9 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack'); //to access built-in plugins
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
 
   entry: "./src/assets/js/main.js",
 
@@ -15,6 +15,14 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
+      },
     }),
   ],
 
@@ -22,17 +30,12 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ],
+        use: ["style-loader", "css-loader"],
       },
       {
-         test: /\.(png|svg|jpg|gif)$/,
-         use: [
-           'file-loader',
-         ],
-       },
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ["file-loader"],
+      },
     ],
   },
 };
